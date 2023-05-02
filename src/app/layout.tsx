@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/ui/theme-provider";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -14,9 +15,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={` ${inter.variable} font-inter p-5 w-screen h-screen`}>
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={` ${inter.variable} font-inter p-5 w-screen h-screen antialiased`}
+      >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
