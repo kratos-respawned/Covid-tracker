@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 function DashboardCards() {
   return (
-    <section className="grid grid-cols-4 gap-x-8">
+    <section className="grid lg:grid-cols-4 grid-cols-1 sm:grid-cols-2 gap-8">
       {Data.map((item) => (
         <DashboardCard
           key={item.title}
@@ -41,16 +41,15 @@ const DashboardCard = ({
         </CardTitle>
         {icon}
       </CardHeader>
-      <CardContent className="pb-2">
+      <CardContent className="pb-2 space-y-1.5">
         <p className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
           {number}
         </p>
-      </CardContent>
-      <CardFooter>
-        <p className="scroll-m-20 text-xl font-semibold tracking-tight">
+
+        <p className="scroll-m-20 text-base  font-semibold tracking-tight">
           +20.1% from last month
         </p>
-      </CardFooter>
+      </CardContent>
     </Card>
   );
 };
@@ -74,6 +73,6 @@ const Data = [
   {
     number: 100,
     title: "Total Active",
-    icon: <Activity />,
+    icon: <Activity className="animate-pulse" />,
   },
 ];

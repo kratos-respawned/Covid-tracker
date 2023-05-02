@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import TailwindDebug from "@/components/ui/TailwindDebug";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -17,10 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={` ${inter.variable} font-inter p-5 w-screen h-screen antialiased`}
+        className={` ${inter.variable} font-inter p-5 min-h-screen   antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
+          {process.env.NODE_ENV === "development" && <TailwindDebug />}
         </ThemeProvider>
       </body>
     </html>

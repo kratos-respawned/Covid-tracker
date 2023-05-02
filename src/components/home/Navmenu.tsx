@@ -1,38 +1,19 @@
 "use client";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
+import { TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
 
 const Navmenu = () => {
   return (
-    <NavigationMenu className="justify-start my-5 ">
-      <NavigationMenuList className="   rounded-md bg-muted p-1 space-x-2 border child:px-1.5 child:py-1  ">
-        <NavigationMenuItem className="bg-muted-foreground/30 rounded-md">
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink>Overview</NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink>Analytics</NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink>Reports</NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink>Notifications</NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-    </NavigationMenu>
+    <TabsList className="mb-4 text-xs sm:text-base child:p-1 child:sm:py-1.5 child:sm:px-3 ">
+      <TabsTrigger value="overview">Overview</TabsTrigger>
+      <TabsTrigger value="analytics">Analytics</TabsTrigger>
+      <TabsTrigger value="reports" disabled>
+        Reports
+      </TabsTrigger>
+      <TabsTrigger value="notifications" disabled>
+        Notifications
+      </TabsTrigger>
+    </TabsList>
   );
 };
 export default Navmenu;

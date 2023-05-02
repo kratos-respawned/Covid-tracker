@@ -21,7 +21,7 @@ function ThemeChanger() {
   }
   return (
     <>
-      <button onClick={toggle}>
+      <button className="absolute right-2 top-2.5 md:static" onClick={toggle}>
         {theme === "dark" ? (
           <Moon className="text-6xl" />
         ) : (
