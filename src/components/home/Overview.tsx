@@ -1,5 +1,3 @@
-"use client";
-
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 
 const data = [
@@ -60,13 +58,18 @@ export function Overview() {
         <XAxis
           dataKey="name"
           stroke="#888888"
-          fontSize={12}
+          fontSize={
+            typeof window !== "undefined" && window.innerWidth < 768 ? 10 : 12
+          }
           tickLine={false}
           axisLine={false}
         />
         <YAxis
           stroke="#888888"
-          fontSize={12}
+          fontSize={
+            typeof window !== "undefined" && window.innerWidth < 768 ? 10 : 12
+          }
+          className="mr-8"
           tickLine={false}
           axisLine={false}
           tickFormatter={(value) => `${value}`}
