@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { WorldWideData } from "../../../typings/worldwideData";
 import useSWR from "swr";
 import { fetcher } from "@/lib/fetcher";
-import { Skeleton } from "../ui/skeleton";
+
 export const RecentCases = () => {
   const {
     data: WorldWideStats,
@@ -19,10 +19,6 @@ export const RecentCases = () => {
   });
   return (
     <div className="space-y-8">
-      {isLoading &&
-        Array(5)
-          .fill(0)
-          .map((_, index) => <SkeletonRecentCases key={index} />)}
       {!isLoading &&
         !error &&
         WorldWideStats.slice(1, 6).map((item) => (
@@ -38,16 +34,6 @@ export const RecentCases = () => {
           </div>
         ))}
       {!isLoading && error && <p className="text-red-500">Error</p>}
-    </div>
-  );
-};
-
-const SkeletonRecentCases = () => {
-  return (
-    <div className="flex items-center">
-      <Skeleton className="flex h-9 w-9 aspect-square rounded-full " />
-      <Skeleton className="ml-4 space-y-1 h-6 w-full" />
-      <Skeleton className="justify-self-end ml-5 h-6 w-20" />
     </div>
   );
 };
