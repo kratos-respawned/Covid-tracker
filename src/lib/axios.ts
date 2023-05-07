@@ -1,6 +1,7 @@
 import axios from "axios";
-
+const URL = process.env.BACKEND_URL;
+if (!URL) throw new Error("BACKEND_URL is not defined");
 const instance = axios.create({
-  baseURL: "http://localhost:5173/",
+  baseURL: URL,
 });
 export default instance;
