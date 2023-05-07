@@ -2,6 +2,10 @@ import { ThemeProvider } from "@/components/ui/theme-provider";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import TailwindDebug from "@/components/ui/TailwindDebug";
+import Navmenu from "@/components/home/Navmenu";
+import ThemeChanger from "@/components/home/ThemeChanger";
+import { CalendarDateRangePicker } from "@/components/home/CalendarDateRangePicker";
+import Overview from "@/components/home/Overview";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -21,7 +25,22 @@ export default function RootLayout({
         className={` ${inter.variable} font-inter p-5 min-h-screen   antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+          <main className="p-4 rounded-md border  ">
+            <header className=" ">
+              <div className="flex flex-col md:flex-row gap-y-9 justify-between relative">
+                <h1 className="scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-4xl">
+                  Covid-19 Dashboard
+                </h1>
+                <div className="flex gap-x-4 items-center">
+                  <CalendarDateRangePicker className="w-fit gap-0 " />
+                  <ThemeChanger />
+                </div>
+              </div>
+              <Navmenu />
+            </header>
+            {children}
+          </main>
+
           {process.env.NODE_ENV === "development" && <TailwindDebug />}
         </ThemeProvider>
       </body>
