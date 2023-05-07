@@ -5,8 +5,6 @@ import TailwindDebug from "@/components/ui/TailwindDebug";
 import Navmenu from "@/components/home/Navmenu";
 import ThemeChanger from "@/components/home/ThemeChanger";
 import { CalendarDateRangePicker } from "@/components/home/CalendarDateRangePicker";
-import Overview from "@/components/home/Overview";
-
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata = {
@@ -40,7 +38,6 @@ export default function RootLayout({
             </header>
             {children}
           </main>
-
           {process.env.NODE_ENV === "development" && <TailwindDebug />}
         </ThemeProvider>
       </body>

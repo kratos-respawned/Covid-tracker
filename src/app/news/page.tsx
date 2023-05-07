@@ -26,6 +26,7 @@ async function page() {
 
 export default page;
 const News = (news: News) => {
+  if (news.image.endsWith("comundefined")) return null;
   return (
     <Card className="flex flex-col gap-2">
       <CardHeader>
