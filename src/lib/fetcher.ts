@@ -1,0 +1,1 @@
+export const fetcher=(key:string)=>fetch("http://localhost:5173/"+key).then((res)=>res.json());

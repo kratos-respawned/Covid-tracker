@@ -8,9 +8,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
 import Image from "next/image";
 
+export const dynamic="force-dynamic";
 async function page() {
   const data: News[] = await fetchNews();
   return (
