@@ -1,7 +1,8 @@
+
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { WorldWideData } from "../../../typings/worldwideData";
 import { globalStats } from "@/lib/worldStatFetcher";
-
+export const dynamic = "force-dynamic";
 export async function RecentCases() {
   const WorldWideStats: WorldWideData[] = await globalStats();
 

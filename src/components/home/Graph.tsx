@@ -1,54 +1,55 @@
-"use client";
+"use client"
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 
 const data = [
   {
     name: "Jan",
-    total: Math.floor(Math.random() * 4000000) + 1000,
+    
+    total: 74645235
   },
   {
     name: "Feb",
-    total: Math.floor(Math.random() * 4000000) + 1000,
+    total: 70236863,
   },
   {
     name: "Mar",
-    total: Math.floor(Math.random() * 4000000) + 1000,
+    total: 34523423,
   },
   {
     name: "Apr",
-    total: Math.floor(Math.random() * 4000000) + 1000,
+    total: 72564564,
   },
   {
     name: "May",
-    total: Math.floor(Math.random() * 4000000) + 1000,
+    total: 42312123,
   },
   {
     name: "Jun",
-    total: Math.floor(Math.random() * 4000000) + 1000,
+    total: 53434234,
   },
   {
     name: "Jul",
-    total: Math.floor(Math.random() * 4000000) + 1000,
+    total: 43235411,
   },
   {
     name: "Aug",
-    total: Math.floor(Math.random() * 4000000) + 1000,
+    total: 46765345,
   },
   {
     name: "Sep",
-    total: Math.floor(Math.random() * 4000000) + 1000,
+    total: 82342355,
   },
   {
     name: "Oct",
-    total: Math.floor(Math.random() * 4000000) + 1000,
+    total: 34634534,
   },
   {
     name: "Nov",
-    total: Math.floor(Math.random() * 4000000) + 1000,
+    total: 42342332,
   },
   {
     name: "Dec",
-    total: Math.floor(Math.random() * 4000000) + 1000,
+    total: 72312434,
   },
 ];
 
@@ -68,9 +69,9 @@ export function Graph() {
         <YAxis
           stroke="#888888"
           fontSize={
-            typeof window !== "undefined" && window.innerWidth < 768 ? 10 : 12
+            typeof window !== "undefined" && window.innerWidth < 768 ? 10 : 10
           }
-          className="mr-8"
+          
           tickLine={false}
           axisLine={false}
           tickFormatter={(value) => `${value}`}

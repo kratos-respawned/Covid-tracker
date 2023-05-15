@@ -9,11 +9,11 @@ const Navmenu = ({
   ...props
 }: React.HTMLAttributes<HTMLElement>) => {
   const pathName = usePathname();
-  console.log(pathName);
+  
   return (
     <nav
       className={cn(
-        " space-x-4 mb-8 mt-12 inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground ",
+        " md:space-x-4 mb-8 mt-12 inline-flex h-10 items-center justify-center rounded-md bg-muted p-0.5 text-xs md:p-1 text-muted-foreground ",
         className
       )}
       {...props}
@@ -22,8 +22,8 @@ const Navmenu = ({
       <Navigator title="News" link="/news" currentPath={pathName} />
       <Navigator title="Statistics" link="/statistics" currentPath={pathName} />
       <Navigator
-        title="Vaccination"
-        link="/vaccination"
+        title="Analytics"
+        link="/analytics"
         currentPath={pathName}
       />
     </nav>
@@ -44,7 +44,7 @@ const Navigator = ({
     <Link
       href={link}
       className={`
-inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background 
+inline-flex items-center justify-center whitespace-nowrap rounded-sm px-1.5 sm:px-3 py-1.5 text-sm font-medium ring-offset-background 
 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2  
            ${
              isActive
