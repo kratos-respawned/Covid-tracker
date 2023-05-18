@@ -7,7 +7,10 @@ import { StateSheet } from "./components/state-sheet";
 import useSWR from "swr";
 import { fetcher } from "@/lib/fetcher";
  function Index() {
-  const {data,isLoading}=useSWR("vaccinationData",fetcher)
+  const {data,isLoading}=useSWR("vaccinationData",fetcher,{
+    revalidateOnFocus:false,
+    revalidateIfStale:false
+})
   return (
     <>
     <Separator />
