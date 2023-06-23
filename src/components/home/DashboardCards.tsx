@@ -9,7 +9,7 @@ import {
 import { WorldWideData } from "../../../typings/worldwideData";
 import { globalStats } from "@/lib/worldStatFetcher";
 
-export const dynamic="force-dynamic"
+
 
 async function DashboardCards() {
   const WorldWideStats: WorldWideData[] = await globalStats();

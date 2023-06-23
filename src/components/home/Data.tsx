@@ -16,7 +16,7 @@ export const Data = () => {
           <CardTitle>Overview</CardTitle>
         </CardHeader>
         <CardContent>
-          <Graph />
+          {/* <Graph /> */}
         </CardContent>
       </Card>
       <Card className="col-span-4 sm:col-span-3">

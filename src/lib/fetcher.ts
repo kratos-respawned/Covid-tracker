@@ -1,1 +1,0 @@
-export const fetcher=(key:string)=>fetch(process.env.NEXT_PUBLIC_BACKEND_URL+key).then((res)=>res.json());
