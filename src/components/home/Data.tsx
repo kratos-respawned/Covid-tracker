@@ -16,7 +16,7 @@ export const Data = () => {
           <CardTitle>Overview</CardTitle>
         </CardHeader>
         <CardContent>
-          {/* <Graph /> */}
+          <Graph />
         </CardContent>
       </Card>
       <Card className="col-span-4 sm:col-span-3">
@@ -25,7 +25,6 @@ export const Data = () => {
           <CardDescription>Cases from all over the world</CardDescription>
         </CardHeader>
         <CardContent>
-          {/* @ts-expect-error */}
           <RecentCases />
         </CardContent>
       </Card>

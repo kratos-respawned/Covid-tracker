@@ -4,9 +4,9 @@ import { vaccineData } from "@/lib/stateData";
 
 export const Graphbar = async () => {
   const data = await vaccineData();
-  const vaccineWiseData = JSON.stringify(data.vaccineWiseData);
-  const ageWiseData = JSON.stringify(data.ageWiseData);
-  const genderWiseData = JSON.stringify(data.genderWiseData);
+  const vaccineWiseData = data.vaccineWiseData;
+  const ageWiseData = data.ageWiseData;
+  const genderWiseData = data.genderWiseData;
   return (
     <div className=" p-4  w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3 ">
       <Card>

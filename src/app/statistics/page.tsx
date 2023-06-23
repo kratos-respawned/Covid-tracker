@@ -12,10 +12,8 @@ async function Index() {
       <Separator />
       <section className=" mt-5">
         <div className="grid p-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
-          {/* @ts-ignore */}
           <Topbar />
         </div>
-        {/* @ts-ignore */}
         <Graphbar />
         <Card className="p-4  ">
           <CardHeader>

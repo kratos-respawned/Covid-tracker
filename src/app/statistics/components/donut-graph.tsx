@@ -1,7 +1,7 @@
 "use client"
 import { PieChart, pieChartDefaultProps } from "react-minimal-pie-chart"
 export const DonutGraph = ({data}:{data:any}) => {    
-  data = JSON.parse(data);
+  // data = JSON.parse(data);
   const shiftSize = 0;
   const defaultLabelStyle = {
     fontSize: '3px',

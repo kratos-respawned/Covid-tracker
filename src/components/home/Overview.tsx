@@ -4,7 +4,6 @@ import { Data } from "./Data";
 function Overview() {
   return (
     <>
-      {/* @ts-expect-error */}
       <DashboardCards />
       <Data />
     </>
